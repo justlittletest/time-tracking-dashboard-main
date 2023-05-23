@@ -13,12 +13,13 @@ html {
 	--lighter-purple-text-color: #bbc0ff;
 	--orange-color: #ff8b64;
 	--light-blue-color: #55c2e6;
-	--light-red-color: #f04667;
+	--light-red-color: #ff5e7d;
 	--light-green-color: #4bcf82;
 	--yellow-color: #f1c75b;
 	--white-color: #fff;
 	--border-radius-medium: 15px;
 	--padding-every-different: 3.5rem 3.9rem 3.4rem 3.2rem;
+	--padding-every-different-smaller: 2.4rem 3.9rem 2.5rem;
 }
 
 *,
@@ -36,12 +37,22 @@ body {
 	color: var(--white-color);
 }
 
+.tertiary-heading {
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
 .time-tracking-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32.7rem, 1fr));
+	gap: 3rem;
 	padding: 8rem 2.4rem;
+	justify-content: center;
+	align-items: end;
 }
 
 .container {
-	max-width: 37.5rem;
+	max-width: 144rem;
 	margin: 0 auto;
 }
 
@@ -59,6 +70,14 @@ body {
 	border-radius: var(--border-radius-medium);
 	background-color: var(--purple-blue-color);
 
+	&__data {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		grid-row: 1/3;
+		align-self: center;
+	}
+
 	&__img {
 		grid-row: 1/3;
 		border: 3px solid var(--white-color);
@@ -68,23 +87,163 @@ body {
 	}
 	&__text {
 		font-size: 1.5rem;
-		align-self: self-end;
 		color: var(--lighter-purple-text-color);
 		font-weight: 400;
 	}
 	&__full-name {
 		font-size: 2.4rem;
-		align-self: self-start;
 		font-weight: 300;
 	}
 }
 
 .person-information-time {
 	display: flex;
-	padding: var(--padding-every-different);
+	padding: var(--padding-every-different-smaller);
 	background-color: var(--lighter-dark-navy-blue-color);
 	font-size: 1.8rem;
 	justify-content: space-between;
-	// align-items: center;
 	border-radius: var(--border-radius-medium);
+
+	&__btn {
+		cursor: pointer;
+		background: none;
+		border: none;
+		font-family: inherit;
+		color: var(--light-purple-text-color);
+		transition: color 0.3s;
+		font-size: 1.8rem;
+		width: fit-content;
+		&:hover {
+			color: var(--white-color);
+		}
+	}
+}
+
+///ACTIVITY CARDS
+
+.activities-information-card {
+	position: relative;
+	border-radius: var(--border-radius-medium);
+	overflow: hidden;
+	height: 16rem;
+
+	&--background {
+		background-repeat: no-repeat;
+		background-position: 90% -5%;
+	}
+
+	&--orange {
+		background-color: var(--orange-color);
+		background-image: url('../images/icon-work.svg');
+	}
+
+	&--blue {
+		background-color: var(--light-blue-color);
+		background-image: url('../images/icon-play.svg');
+	}
+
+	&--red {
+		background-color: var(--light-red-color);
+		background-image: url('../images/icon-study.svg');
+	}
+
+	&--green {
+		background-color: var(--light-green-color);
+		background-image: url('../images/icon-exercise.svg');
+	}
+
+	&--purple {
+		background-color: var(--purple-blue-color);
+		background-image: url('../images/icon-social.svg');
+	}
+
+	&--yellow {
+		background-color: var(--yellow-color);
+		background-image: url('../images/icon-self-care.svg');
+	}
+}
+
+.activity-information {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: min-content;
+	row-gap: 2rem;
+	padding: 2.8rem 2.4rem;
+	background-color: var(--lighter-dark-navy-blue-color);
+	border-radius: var(--border-radius-medium);
+
+	&__btn {
+		cursor: pointer;
+		background: none;
+		border: none;
+		width: fit-content;
+		justify-self: end;
+	}
+
+	&__hours-text {
+		font-size: 3.2rem;
+		font-weight: 300;
+	}
+
+	&__img {
+		justify-self: self-end;
+	}
+
+	&__last-week-text {
+		justify-self: self-end;
+		align-self: center;
+		font-size: 1.5rem;
+		color: var(--lighter-purple-text-color);
+	}
+}
+
+@media only screen and (width>69.376em) {
+	.time-tracking-section {
+		grid-template-columns: repeat(4, 1fr);
+		align-items: stretch;
+	}
+	.person-information-card {
+		grid-row: 1/3;
+		grid-column: 1/2;
+	}
+
+	.person-information {
+		padding: 3.7rem 3.2rem 8rem;
+		height: 70%;
+		grid-auto-rows: min-content;
+		row-gap: 4rem;
+		grid-template-rows: repeat(2, auto);
+		grid-template-columns: repeat(2, auto);
+
+		&__img {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			align-self: self-start;
+			width: 48%;
+			place-self: start;
+		}
+		&__data {
+			grid-row: 2/3;
+			grid-column: 1/2;
+			line-height: 1.1;
+		}
+		&__full-name {
+			font-size: 4rem;
+		}
+	}
+
+	.person-information-time {
+		padding: 2.6rem 3.2rem 3.3rem;
+		flex-direction: column;
+		row-gap: 2rem;
+		align-content: flex-start;
+	}
+
+	.activities-information-card {
+		height: auto;
+	}
 }
