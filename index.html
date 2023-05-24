@@ -25,9 +25,9 @@
           </div>
         </div>
         <div class="person-information-time">
-          <button class="person-information-time__btn">Daily</button>
-          <button class="person-information-time__btn">Weekly</button>
-          <button class="person-information-time__btn">Monthly</button>
+          <button class="person-information-time__btn" data-btn="daily">Daily</button>
+          <button class="person-information-time__btn" data-btn="weekly">Weekly</button>
+          <button class="person-information-time__btn" data-btn="monthly">Monthly</button>
         </div>
       </div>
 
@@ -35,11 +35,15 @@
         activities-information-card--background">
         <div class="activity-information">
           <h3 class="tertiary-heading">Work</h3>
+
           <button class="activity-information__btn">
-            <img src="./images/icon-ellipsis.svg" alt="Purple dots" class="activity-information__img">
+            <svg class="activity-information__img" width=" 21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
           </button>
-          <p class="activity-information__hours-text">32hrs</p>
-          <p class="activity-information__last-week-text">Last Week - 5hrs</p>
+          <p class="activity-information__hours-text" data-current-week="work">32hrs</p>
+          <p class="activity-information__last-week-text" data-previous-week="work">Last Week - 5hrs</p>
         </div>
       </div>
 
@@ -47,12 +51,15 @@
       <div class="activities-information-card activities-information-card--blue
         activities-information-card--background">
         <div class="activity-information">
-          <h3 class="tertiary-heading">Work</h3>
+          <h3 class="tertiary-heading">Play</h3>
           <button class="activity-information__btn">
-            <img src="./images/icon-ellipsis.svg" alt="Purple dots" class="activity-information__img">
+            <svg class="activity-information__img" width=" 21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
           </button>
-          <p class="activity-information__hours-text">32hrs</p>
-          <p class="activity-information__last-week-text">Last Week - 5hrs</p>
+          <p class="activity-information__hours-text" data-current-week="play">32hrs</p>
+          <p class="activity-information__last-week-text" data-previous-week="play">Last Week - 5hrs</p>
         </div>
       </div>
 
@@ -60,12 +67,15 @@
       <div class="activities-information-card activities-information-card--red
         activities-information-card--background">
         <div class="activity-information">
-          <h3 class="tertiary-heading">Work</h3>
+          <h3 class="tertiary-heading">Study</h3>
           <button class="activity-information__btn">
-            <img src="./images/icon-ellipsis.svg" alt="Purple dots" class="activity-information__img">
+            <svg class="activity-information__img" width=" 21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
           </button>
-          <p class="activity-information__hours-text">32hrs</p>
-          <p class="activity-information__last-week-text">Last Week - 5hrs</p>
+          <p class="activity-information__hours-text" data-current-week="study">32hrs</p>
+          <p class="activity-information__last-week-text" data-previous-week="study">Last Week - 5hrs</p>
         </div>
       </div>
 
@@ -73,12 +83,15 @@
       <div class="activities-information-card activities-information-card--green
         activities-information-card--background">
         <div class="activity-information">
-          <h3 class="tertiary-heading">Work</h3>
+          <h3 class="tertiary-heading">Exercise</h3>
           <button class="activity-information__btn">
-            <img src="./images/icon-ellipsis.svg" alt="Purple dots" class="activity-information__img">
+            <svg class="activity-information__img" width=" 21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
           </button>
-          <p class="activity-information__hours-text">32hrs</p>
-          <p class="activity-information__last-week-text">Last Week - 5hrs</p>
+          <p class="activity-information__hours-text" data-current-week="exercise">32hrs</p>
+          <p class="activity-information__last-week-text" data-previous-week="exercise">Last Week - 5hrs</p>
         </div>
       </div>
 
@@ -86,12 +99,15 @@
       <div class="activities-information-card activities-information-card--purple
         activities-information-card--background">
         <div class="activity-information">
-          <h3 class="tertiary-heading">Work</h3>
+          <h3 class="tertiary-heading">Social</h3>
           <button class="activity-information__btn">
-            <img src="./images/icon-ellipsis.svg" alt="Purple dots" class="activity-information__img">
+            <svg class="activity-information__img" width=" 21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
           </button>
-          <p class="activity-information__hours-text">32hrs</p>
-          <p class="activity-information__last-week-text">Last Week - 5hrs</p>
+          <p class="activity-information__hours-text" data-current-week="social">32hrs</p>
+          <p class="activity-information__last-week-text" data-previous-week="social">Last Week - 5hrs</p>
         </div>
       </div>
 
@@ -99,12 +115,15 @@
       <div class="activities-information-card activities-information-card--yellow
         activities-information-card--background">
         <div class="activity-information">
-          <h3 class="tertiary-heading">Work</h3>
+          <h3 class="tertiary-heading">Self Care</h3>
           <button class="activity-information__btn">
-            <img src="./images/icon-ellipsis.svg" alt="Purple dots" class="activity-information__img">
+            <svg class="activity-information__img" width=" 21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
           </button>
-          <p class="activity-information__hours-text">32hrs</p>
-          <p class="activity-information__last-week-text">Last Week - 5hrs</p>
+          <p class="activity-information__hours-text" data-current-week="self-care">32hrs</p>
+          <p class="activity-information__last-week-text" data-previous-week="self-care">Last Week - 5hrs</p>
         </div>
       </div>
 

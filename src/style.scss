@@ -7,6 +7,7 @@ html {
 	--main-font: 'Rubik', sans-serif;
 	--dark-navy-blue-color: #0e1323;
 	--lighter-dark-navy-blue-color: #1c204b;
+	--lighter-dark-navy-blue-active-color: #33397a;
 	--purple-blue-color: #5747ea;
 	--purple-color: #7335d2;
 	--light-purple-text-color: #7078c9;
@@ -123,8 +124,7 @@ body {
 
 .activities-information-card {
 	position: relative;
-	border-radius: var(--border-radius-medium);
-	overflow: hidden;
+	border-radius: 16px;
 	height: 16rem;
 
 	&--background {
@@ -175,6 +175,11 @@ body {
 	padding: 2.8rem 2.4rem;
 	background-color: var(--lighter-dark-navy-blue-color);
 	border-radius: var(--border-radius-medium);
+	cursor: pointer;
+	transition: 0.4s background-color;
+	&:hover {
+		background-color: var(--lighter-dark-navy-blue-active-color);
+	}
 
 	&__btn {
 		cursor: pointer;
@@ -182,6 +187,10 @@ body {
 		border: none;
 		width: fit-content;
 		justify-self: end;
+
+		&:hover > .activity-information__img {
+			fill: var(--white-color);
+		}
 	}
 
 	&__hours-text {
@@ -190,7 +199,8 @@ body {
 	}
 
 	&__img {
-		justify-self: self-end;
+		transition: 0.3s fill;
+		fill: var(--lighter-purple-text-color);
 	}
 
 	&__last-week-text {
@@ -201,9 +211,10 @@ body {
 	}
 }
 
-@media only screen and (width>69.376em) {
+@media only screen and (width>69.375em) {
 	.time-tracking-section {
-		grid-template-columns: repeat(4, 1fr);
+		padding: 25.3rem 16.5rem;
+		grid-template-columns: repeat(4, minmax(25.5rem, 1fr));
 		align-items: stretch;
 	}
 	.person-information-card {
@@ -245,5 +256,20 @@ body {
 
 	.activities-information-card {
 		height: auto;
+	}
+
+	.activity-information {
+		padding: 2.9rem 3rem 3.2rem;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(3, auto);
+
+		&__hours-text {
+			font-size: 5.6rem;
+		}
+
+		&__last-week-text {
+			grid-row: 3/4;
+			justify-self: start;
+		}
 	}
 }
